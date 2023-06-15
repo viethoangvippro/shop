@@ -8,4 +8,9 @@ import { UserService } from '../user.service';
 })
 export class AdminComponent {
   constructor(private userService: UserService){}
+  onLogout(): void {
+    // Đăng xuất và chuyển hướng về trang đăng nhập
+    this.userService.logout();
+    window.location.href = '/';
+  }
 }

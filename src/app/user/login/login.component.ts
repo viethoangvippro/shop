@@ -19,20 +19,21 @@ users :any[] =[];
   ngOnInit(){
 
   }
-    async login() {
-      // const url = 'http://localhost:3000/user';
-      // this.role = this.userService.get<User>(url);
-    // Perform authentication and retrieve permissions
-    const permissions = ['ADMIN']; // Example permissions
-    this.userService.setPermissions(permissions);
-
-    // let a = this.userService.login1(this.username,this.password,this.role);
-    // Navigate to appropriate page based on permissions
-    if (await this.userService.hasPermission('ADMIN')) {
-      this.router.navigateByUrl('/admin');
+  onSubmit(): void {
+    if (this.userService.login(this.username, this.password)) {
+      // Nếu đăng nhập thành công, chuyển hướng đến trang tương ứng với vai trò của người dùng
+      if (this.userService.isAdmin()) {
+        this.router.navigate(['/admin']);
+           } else if (this.userService.isEmployee()) {
+        this.router.navigate(['/staff']);
+      } else {
+        this.router.navigate(['/user']);
+      }
     } else {
-      this.router.navigateByUrl('/userlogin');
+      // Nếu đăng nhập thất bại, hiển thị thông báo lỗi
+      alert('Invalid username or password');
     }
+  }
   }
 
   // onSubmit() {
@@ -48,4 +49,3 @@ users :any[] =[];
   //   );
   // }
 
-}

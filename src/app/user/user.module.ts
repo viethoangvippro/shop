@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { AdminComponent } from './admin/admin.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { StaffComponent } from './staff/staff.component';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     LoginComponent,
     RegisterComponent,
     AdminComponent,
-    UserloginComponent
+    UserloginComponent,
+    StaffComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,7 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     NgxPermissionsModule.forRoot(),
   ],exports:[
     LoginComponent,
-    RegisterComponent
-  ]
+    RegisterComponent,
+  ],providers: [UserService, NgxPermissionsModule]
 })
 export class UserModule { }
