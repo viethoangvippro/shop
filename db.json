@@ -19,7 +19,7 @@
       "color": "red",
       "price": "13002",
       "description": "Product description",
-      "rating": "2",
+      "rating": "4",
       "isValiable": "1",
       "reviews": "1",
       "id": 2
@@ -131,6 +131,26 @@
       "address": "Nui thanh",
       "gender": "Female",
       "id": 3
+    },
+    {
+      "username": "hoang",
+      "password": "123123",
+      "email": "hoangkai25@gmail.com",
+      "confirmpassword": "123123",
+      "phone": "0397064432",
+      "address": "Nui thanh",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "username": "hoang1",
+      "password": "123123",
+      "email": "tviethoang29@gmail.com",
+      "confirmpassword": "123123",
+      "phone": "0397064432",
+      "address": "Nui thanh",
+      "gender": "Female",
+      "id": 5
     }
   ],
   "comments": [

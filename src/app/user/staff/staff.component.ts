@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-userlogin',
-  templateUrl: './userlogin.component.html',
-  styleUrls: ['./userlogin.component.css']
+  selector: 'app-staff',
+  templateUrl: './staff.component.html',
+  styleUrls: ['./staff.component.css']
 })
-export class UserloginComponent implements OnInit {
-  constructor(private userService: UserService){}
+export class StaffComponent implements OnInit {
+  constructor(private userService: UserService) { }
+
   ngOnInit(): void {
   }
 
@@ -17,4 +18,3 @@ export class UserloginComponent implements OnInit {
     window.location.href = '/';
   }
 }
-

@@ -5,17 +5,16 @@ import { RegisterComponent } from './register/register.component';
 import { UsersRoutingModule } from './user-routing.modules';
 import { FormsModule } from '@angular/forms';
 
+
+import { UserService } from './user.service';
 import { NgxPermissionsModule } from 'ngx-permissions';
-import { AdminComponent } from './admin/admin.component';
-import { UserloginComponent } from './userlogin/userlogin.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
-    AdminComponent,
-    UserloginComponent
+
   ],
   imports: [
     CommonModule,
@@ -25,6 +24,7 @@ import { UserloginComponent } from './userlogin/userlogin.component';
   ],exports:[
     LoginComponent,
     RegisterComponent
-  ]
+  ],
+  providers: [UserService, NgxPermissionsModule]
 })
 export class UserModule { }

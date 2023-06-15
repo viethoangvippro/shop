@@ -1,4 +1,3 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
@@ -9,31 +8,48 @@ import { User } from '../user';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent{
-username: string |any;
+export class LoginComponent  implements OnInit{
+  username: string |any;
   password: string |any;
-  role : any;
-users :any[] =[];
-  constructor(private userService: UserService, private router: Router,private httpClient: HttpClient) {}
 
-  ngOnInit(){
-
+  constructor(private authService: UserService, private router: Router) {}
+  ngOnInit(): void {
   }
-    async login() {
-      // const url = 'http://localhost:3000/user';
-      // this.role = this.userService.get<User>(url);
-    // Perform authentication and retrieve permissions
-    const permissions = ['ADMIN']; // Example permissions
-    this.userService.setPermissions(permissions);
 
-    // let a = this.userService.login1(this.username,this.password,this.role);
-    // Navigate to appropriate page based on permissions
-    if (await this.userService.hasPermission('ADMIN')) {
-      this.router.navigateByUrl('/admin');
+  onSubmit(): void {
+    if (this.authService.login(this.username, this.password)) {
+      // Nếu đăng nhập thành công, chuyển hướng đến trang tương ứng với vai trò của người dùng
+      if (this.authService.isAdmin()) {
+        this.router.navigate(['/admin']);
+           } else if (this.authService.isEmployee()) {
+        this.router.navigate(['/staff']);
+      } else {
+        this.router.navigate(['/userlogin']);
+      }
     } else {
-      this.router.navigateByUrl('/userlogin');
+      // Nếu đăng nhập thất bại, hiển thị thông báo lỗi
+      alert('Invalid username or password');
     }
   }
+
+  // ngOnInit(){
+
+  // }
+  //   async login() {
+  //     // const url = 'http://localhost:3000/user';
+  //     // this.role = this.userService.get<User>(url);
+  //   // Perform authentication and retrieve permissions
+  //   const permissions = ['ADMIN']; // Example permissions
+  //   this.userService.setPermissions(permissions);
+
+  //   // let a = this.userService.login1(this.username,this.password,this.role);
+  //   // Navigate to appropriate page based on permissions
+  //   if (await this.userService.hasPermission('ADMIN')) {
+  //     this.router.navigateByUrl('/admin');
+  //   } else {
+  //     this.router.navigateByUrl('/userlogin');
+  //   }
+  // }
 
   // onSubmit() {
   //   this.userService.login(this.username, this.password).subscribe(
@@ -47,5 +63,4 @@ users :any[] =[];
   //     }
   //   );
   // }
-
 }
