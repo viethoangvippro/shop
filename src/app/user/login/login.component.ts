@@ -27,11 +27,11 @@ users :any[] =[];
            } else if (this.userService.isEmployee()) {
         this.router.navigate(['/staff']);
       } else {
-        this.router.navigate(['/user']);
+        this.router.navigate(['/userlogin']);
       }
     } else {
       // Nếu đăng nhập thất bại, hiển thị thông báo lỗi
-      alert('Invalid username or password');
+      alert('Sai tài khoản hoặc mật khẩu');
     }
   }
   }

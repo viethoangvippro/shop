@@ -65,7 +65,6 @@ export class UserService {
     if (user) {
       return { id: user.id, username: user.username, role: user.role };
     }
-
     return null;
   }
   async login2(username: string, password: string): Promise<Observable<any>> {

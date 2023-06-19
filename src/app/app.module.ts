@@ -20,6 +20,7 @@ import { UserModule } from './user/user.module';
     OrdersModule,
     HttpClientModule,
     SiteFrameworkModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
