@@ -13,18 +13,6 @@
       "id": 1
     },
     {
-      "productName": "laptop ",
-      "categoryId": "6",
-      "productImg": "https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn//News/1499078//laptop-15-800x450-1.jpg",
-      "color": "red",
-      "price": "13002",
-      "description": "Product description",
-      "rating": "2",
-      "isValiable": "1",
-      "reviews": "1",
-      "id": 2
-    },
-    {
       "productName": "Laptop",
       "categoryId": "2",
       "productImg": "https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg",
@@ -68,6 +56,28 @@
       "rating": "1",
       "isValiable": "1",
       "id": 4235
+    },
+    {
+      "id": 32412,
+      "categoryId": "5",
+      "productName": "hoang",
+      "description": "Laptop chinh hang bao hanh 0 ngay",
+      "rating": "1",
+      "price": "132",
+      "productImg": "https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg",
+      "isValiable": "1",
+      "color": "red"
+    },
+    {
+      "id": 391041,
+      "categoryId": "5",
+      "productName": "Laptop",
+      "description": "Laptop chinh hang bao hanh 0 ngay",
+      "rating": "2",
+      "price": "132",
+      "productImg": "https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg",
+      "isValiable": "1",
+      "color": "red"
     }
   ],
   "categories": [
@@ -131,6 +141,47 @@
       "address": "Nui thanh",
       "gender": "Female",
       "id": 3
+    },
+    {
+      "username": "hoang2",
+      "password": "123",
+      "email": "hoangkai251@gmail.com",
+      "confirmpassword": "123",
+      "phone": "0397064432",
+      "address": "Nui thanh",
+      "gender": "Male",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productName": "laptop"
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 5
     }
   ],
   "comments": [

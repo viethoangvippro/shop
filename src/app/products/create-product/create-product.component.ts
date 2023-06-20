@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { ViewAllProductsComponent } from '../view-all-products/view-all-products.component';
 
 @Component({
   selector: 'app-create-product',
@@ -32,6 +33,7 @@ export class CreateProductComponent implements OnInit{
     };
     this.productService.createProduct(newProduct).subscribe(data => {
       console.log(data);
+
     })
   }
 }

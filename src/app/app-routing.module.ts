@@ -4,11 +4,13 @@ import { ListOrdersComponent } from './orders/list-orders/list-orders.component'
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { AdminComponent } from './user/admin/admin.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   {path: 'orders', component:ListOrdersComponent},
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  {path: 'cart', component: CartComponent}
 ];
 
 @NgModule({

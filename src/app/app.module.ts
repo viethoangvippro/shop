@@ -9,10 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { OrdersModule } from './orders/orders.module';
 import { SiteFrameworkModule } from './site-framework/site-framework.module';
 import { UserModule } from './user/user.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

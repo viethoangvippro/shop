@@ -13,7 +13,7 @@ export class LoginComponent{
 username: string |any;
   password: string |any;
   role : any;
-users :any[] =[];
+  users :any[] =[];
   constructor(private userService: UserService, private router: Router,private httpClient: HttpClient) {}
 
   ngOnInit(){
