@@ -14,6 +14,8 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { ViewAllProductsByDateComponent } from './view-all-products-by-date/view-all-products-by-date.component';
 import { ViewAllProductsByCategoryComponent } from './view-all-products-by-category/view-all-products-by-category.component';
 import { ProductsSearchComponent } from './products-search/products-search.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductFilterPipe } from './product-filter.pipe';
 
 
 
@@ -26,13 +28,14 @@ import { ProductsSearchComponent } from './products-search/products-search.compo
     UpdateProductComponent,
     DeleteProductComponent,
     ViewAllProductsByDateComponent,
-    ViewAllProductsByCategoryComponent,ProductsSearchComponent
+    ViewAllProductsByCategoryComponent,ProductsSearchComponent,
+    ProductFilterPipe
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
     FormsModule,
-
+    NgxPaginationModule
   ],exports: [
     ProductsComponent,
     CreateProductComponent,

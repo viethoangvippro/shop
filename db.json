@@ -69,15 +69,16 @@
       "color": "red"
     },
     {
-      "id": 391041,
+      "productName": "123456",
       "categoryId": "5",
-      "productName": "Laptop",
+      "productImg": "https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg",
+      "color": "red",
+      "price": "132",
       "description": "Laptop chinh hang bao hanh 0 ngay",
       "rating": "2",
-      "price": "132",
-      "productImg": "https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg",
       "isValiable": "1",
-      "color": "red"
+      "reviews": "1",
+      "id": 391041
     }
   ],
   "categories": [
@@ -182,6 +183,36 @@
       "price": 100,
       "quantity": 1,
       "id": 5
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 7
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 8
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 9
+    },
+    {
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1,
+      "id": 10
     }
   ],
   "comments": [
