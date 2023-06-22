@@ -16,35 +16,39 @@ import { ViewAllProductsByCategoryComponent } from './view-all-products-by-categ
 import { ProductsSearchComponent } from './products-search/products-search.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductFilterPipe } from './product-filter.pipe';
+import { SiteFrameworkModule } from "../site-framework/site-framework.module";
 
 
 
 @NgModule({
-  declarations: [
-    ProductsComponent,
-    CreateProductComponent,
-    ViewProductComponent,
-    ViewAllProductsComponent,
-    UpdateProductComponent,
-    DeleteProductComponent,
-    ViewAllProductsByDateComponent,
-    ViewAllProductsByCategoryComponent,ProductsSearchComponent,
-    ProductFilterPipe
-  ],
-  imports: [
-    CommonModule,
-    ProductsRoutingModule,
-    FormsModule,
-    NgxPaginationModule
-  ],exports: [
-    ProductsComponent,
-    CreateProductComponent,
-    ViewProductComponent,
-    ViewAllProductsComponent,
-    UpdateProductComponent,
-    DeleteProductComponent,
-    ViewAllProductsByDateComponent,
-    ViewAllProductsByCategoryComponent
-  ],
+    declarations: [
+        ProductsComponent,
+        CreateProductComponent,
+        ViewProductComponent,
+        ViewAllProductsComponent,
+        UpdateProductComponent,
+        DeleteProductComponent,
+        ViewAllProductsByDateComponent,
+        ViewAllProductsByCategoryComponent, ProductsSearchComponent,
+        ProductFilterPipe
+    ],
+    exports: [
+        ProductsComponent,
+        CreateProductComponent,
+        ViewProductComponent,
+        ViewAllProductsComponent,
+        UpdateProductComponent,
+        DeleteProductComponent,
+        ViewAllProductsByDateComponent,
+        ViewAllProductsByCategoryComponent
+    ],
+    imports: [
+        CommonModule,
+        ProductsRoutingModule,
+        FormsModule,
+        NgxPaginationModule,
+        SiteFrameworkModule,
+
+    ]
 })
 export class ProductsModule { }

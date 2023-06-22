@@ -9,12 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { OrdersModule } from './orders/orders.module';
 import { SiteFrameworkModule } from './site-framework/site-framework.module';
 import { UserModule } from './user/user.module';
-import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
+import { HomeModule } from './home/home.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,7 @@ import { CartComponent } from './cart/cart.component';
     OrdersModule,
     HttpClientModule,
     SiteFrameworkModule,
-    UserModule
+    UserModule,FormsModule,HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
