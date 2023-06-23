@@ -13,4 +13,9 @@ export class AdminComponent {
     this.userService.logout();
     window.location.href = '/';
   }
+  status = false;
+  addToggle()
+  {
+    this.status = !this.status;
+  }
 }

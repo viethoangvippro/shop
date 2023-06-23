@@ -16,9 +16,6 @@ export class RegisterComponent {
   gender: any;
 
   constructor(private userService: UserService) {}
-
-
-
   onSubmit() {
     this.userService.register(this.username, this.password,this.confirmpassword,this.email,this.phone,this.address,this.gender).subscribe(
       (response) => {

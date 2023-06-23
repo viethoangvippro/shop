@@ -10,24 +10,28 @@ import { AdminComponent } from './admin/admin.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { StaffComponent } from './staff/staff.component';
 import { UserService } from './user.service';
+import { SiteFrameworkModule } from "../site-framework/site-framework.module";
+import { HomeComponent } from '../home/home.component';
 
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    AdminComponent,
-    UserloginComponent,
-    StaffComponent
-  ],
-  imports: [
-    CommonModule,
-    UsersRoutingModule,
-    FormsModule,
-    NgxPermissionsModule.forRoot(),
-  ],exports:[
-    LoginComponent,
-    RegisterComponent,
-  ],providers: [UserService, NgxPermissionsModule]
+    declarations: [
+        LoginComponent,
+        RegisterComponent,
+        AdminComponent,
+        UserloginComponent,
+        StaffComponent,HomeComponent
+    ],
+    exports: [
+        LoginComponent,
+        RegisterComponent,
+    ], providers: [UserService, NgxPermissionsModule],
+    imports: [
+        CommonModule,
+        UsersRoutingModule,
+        FormsModule,
+        NgxPermissionsModule.forRoot(),
+        SiteFrameworkModule
+    ]
 })
 export class UserModule { }
